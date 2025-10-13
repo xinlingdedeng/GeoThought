@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# HOST_DATA_DIR:宿主机上的数据目录，包含训练数据和模型文件
+# CONTAINER_WORKSPACE:容器内的工作目录，数据将被映射到此路径
+HOST_DATA_DIR=${HOST_DATA_DIR:-"/path/to/your/host/data"}
+CONTAINER_WORKSPACE=${CONTAINER_WORKSPACE:-"/workspace/data"}
+
+docker run -idt --gpus all \
+  --shm-size=64g \
+  --ulimit memlock=-1 \
+  --ulimit stack=67108864 \
+  --cap-add=SYS_ADMIN \
+  -e NCCL_SHM_DISABLE=0 \
+  -e NCCL_IB_DISABLE=1 \
+  -e NCCL_DEBUG=INFO \
+  -e NCCL_SOCKET_IFNAME=eth0 \
+  -e TMPDIR=/dev/shm \
+  -v "${HOST_DATA_DIR}:${CONTAINER_WORKSPACE}" \
+  modelscope-registry.cn-hangzhou.cr.aliyuncs.com/modelscope-repo/modelscope:ubuntu22.04-cuda12.4.0-py311-torch2.6.0-vllm0.8.5.post1-modelscope1.27.0-swift3.5.1
