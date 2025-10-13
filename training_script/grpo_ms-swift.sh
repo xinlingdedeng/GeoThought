@@ -1,3 +1,4 @@
+# 当前文件放在ms-swift-main目录下
 # 设置共享内存路径和大小
 # 说明qwen2_5_vl系列，model_type为qwen2_5_vl，internvl3系列 model_type internvl3
 # dataset的地址下需要放两个文件夹，一个train文件夹，一个test文件夹
