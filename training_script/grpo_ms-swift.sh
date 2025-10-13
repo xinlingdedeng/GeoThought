@@ -1,4 +1,5 @@
 # 设置共享内存路径和大小
+# 说明qwen2_5_vl系列，model_type为qwen2_5_vl，internvl3系列 model_type internvl3
 export WANDB_API_KEY=your_wandb_api_key_here
 export WANDB_MODE=offline
 export TMPDIR=/tmp
