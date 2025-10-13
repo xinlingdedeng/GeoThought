@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# 脚本在ms-swift-main/examples/train/full路径下
 # 从环境变量读取路径配置
 MODEL_PATH=${MODEL_PATH:-"/path/to/your/model"}
 DATASET_PATH=${DATASET_PATH:-"/path/to/your/dataset"}
