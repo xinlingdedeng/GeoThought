@@ -2,6 +2,7 @@
 
 # 脚本在ms-swift-main/examples/train/full路径下
 # 从环境变量读取路径配置
+# InternVL3或者Qwen2.5-VL系列都可用这个脚本
 MODEL_PATH=${MODEL_PATH:-"/path/to/your/model"}
 DATASET_PATH=${DATASET_PATH:-"/path/to/your/dataset"}
 OUTPUT_DIR=${OUTPUT_DIR:-"/path/to/your/output"}
