@@ -1,6 +1,9 @@
 1、使用的是geoqa测试集和gepmetry3k测试集，其中 geoqa测试集754个测试样例，gepmetry3k测试集601个测试样例
+
 2、vllm_server.sh填写model path，加载model,model name为加载成功的模型的命名。
+
 3、vllm_server.sh加载成功后，可以用curl http://localhost:8111/v1/models来验证模型是否加载成功，如果加载成功会出现：
+
 {
   "object": "list",
   "data": [
@@ -31,7 +34,9 @@
     }
   ]
 }
+
 4、修改run_infer.sh的model_name之后，正确填写prompt_path和image_root的路径，其中geoqa测试集的prompt是geoqa_test_prompts.jsonl，image_root填的是Geo170K的路径。其中gepmetry3k测试集的prompt是geometry3k_test_prompts.jsonl，image_root填的是geometry3k的路径。
+
 5、然后启动文件monitor_inference.sh，monitor_inference.sh文件会循环推理测试集3遍。
 
 
