@@ -2,8 +2,8 @@
 
 MAX_RETRIES=3
 TARGET_LINES=754
-OUTPUT_FILE="./result_geoqa/results_InternVL3-8B-1000_sft_1788-dapo.jsonl"
-MAIN_SCRIPT="sh run_infer_7b_sft_158.sh"
+OUTPUT_FILE="./result_geoqa/results_model_name.jsonl"
+MAIN_SCRIPT="sh run_infer.sh"
 PROGRESS_LOG="progress.log"
 
 retry_count=0
